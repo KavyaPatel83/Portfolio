@@ -1,0 +1,346 @@
+/* ============================================================
+   ABOUT.CSS
+   ============================================================ */
+
+/* ── Profile Section ─────────────────────────────────────── */
+.about-hero {
+  padding-top: calc(var(--nav-height) + 4rem);
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* ── KP Avatar ───────────────────────────────────────────── */
+.about-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.about-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+  background: var(--gradient-main);
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.4);
+  animation: morphBorder 8s ease-in-out infinite, glowPulse 3s ease infinite;
+  flex-shrink: 0;
+}
+
+.about-avatar-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px dashed rgba(139, 92, 246, 0.4);
+  animation: spin 20s linear infinite;
+}
+
+.about-avatar-ring-2 {
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px dashed rgba(6, 182, 212, 0.3);
+  animation: spin 30s linear infinite reverse;
+}
+
+.about-floating-badge {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background: var(--gradient-main);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+/* ── About Hero Text ─────────────────────────────────────── */
+.about-hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about-hero-text .role-text {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--purple-light);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.about-bio {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 650px;
+  margin-bottom: 2rem;
+}
+
+.about-bio p + p { margin-top: 1rem; }
+
+/* ── Personal Facts / Quote ──────────────────────────────── */
+.about-quote {
+  margin: 1.5rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--purple);
+  background: rgba(139, 92, 246, 0.07);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-quote::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 10px;
+  font-size: 5rem;
+  color: rgba(139, 92, 246, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.about-quote blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Info Grid ───────────────────────────────────────────── */
+.about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ── Education Section ───────────────────────────────────── */
+.education-card {
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  transition: all var(--transition-normal);
+}
+
+.education-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.15);
+}
+
+.edu-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--gradient-main);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+}
+
+.edu-university {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.edu-degree {
+  font-size: 1rem;
+  color: var(--purple-light);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.edu-location {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-period {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.cgpa-display {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.cgpa-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.cgpa-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Coursework tags */
+.edu-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+/* ── Skills Section ──────────────────────────────────────── */
+.skills-grid-simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category-card {
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  transition: all var(--transition-normal);
+}
+
+.skill-category-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.skill-cat-icon {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.skill-cat-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ── Currently Learning ──────────────────────────────────── */
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.learning-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-normal);
+}
+
+.learning-item:hover {
+  border-color: var(--border-hover);
+  transform: translateX(4px);
+}
+
+.learning-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.learning-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.learning-text span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .about-hero-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .about-bio { margin: 0 auto; }
+  .about-info-grid { grid-template-columns: repeat(2, 1fr); }
+  .education-card { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cgpa-display { text-align: left; }
+}
